@@ -1,0 +1,33 @@
+###> symfony/framework-bundle ###
+/backend/public/bundles/
+/backend/var/
+/backend/vendor/
+###< symfony/framework-bundle ###
+
+###> symfony/webpack-encore-pack ###
+/backend/node_modules/
+/backend/public/build/
+###< symfony/webpack-encore-pack ###
+
+###> symfony/phpunit-bridge ###
+/backend/.phpunit
+/backend/phpunit.xml
+###< symfony/phpunit-bridge ###
+
+###> symfony/web-server-bundle ###
+/backend/.web-server-pid
+###< symfony/web-server-bundle ###
+
+.idea/
+uploads/
+
+/frontend/node_modules/
+/frontend/*.php
+/frontend/.idea
+DEADJOE
+bundle.js
+bundle.min.js
+bundle.min.js.map
+webpack
+pm2
+
