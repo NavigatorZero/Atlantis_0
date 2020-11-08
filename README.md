@@ -17,17 +17,21 @@
    1. sudo apt install nginx-full 
    2. sudo apt install php 
    3. sudo apt install php-fpm 
-   4. cd etc/nginx/sites-enabled 
-   5. vim default 
-   6. скопировать данные из файла nginx.conf , изменив переменную root до папки backend/public , сохранить  
-   7. sudo systemctl start nginx.  
+   4. sudo apt-get install php-xml
+   5. apt-get install php-pgsql
+   6. cd etc/nginx/sites-enabled 
+   7. vim default 
+   8. скопировать данные из файла nginx.conf , изменив переменную root до папки backend/public , сохранить  
+   9. sudo systemctl start nginx.  
 
-  ##  Деплой бекенда: 
+##  Деплой бекенда: 
      1. cd backend 
-     2. composer install 
+     2. composer install
+     3. Прописать в .env фйле реквизиты для доступа к базе
+     4. php bin/console doctrine:migrations:migrate 
      3. symony server:start -port=9000 
 
- ##   Деплой фронта: 
+##  Деплой фронта: 
     1. cd frontend 
     2. sudo npm install 
-    3. sudo npm start 
+    3. sudo npm start    
