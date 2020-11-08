@@ -22,12 +22,12 @@
    6. скопировать данные из файла nginx.conf , изменив переменную root до папки backend/public , сохранить  
    7. sudo systemctl start nginx.  
 
-    Деплой бекенда: 
+  ##  Деплой бекенда: 
      1. cd backend 
      2. composer install 
      3. symony server:start -port=9000 
 
-    Деплой фронта: 
+ ##   Деплой фронта: 
     1. cd frontend 
     2. sudo npm install 
     3. sudo npm start 
