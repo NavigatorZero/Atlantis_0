@@ -2,7 +2,10 @@
 ## Сайт бухгалтерской школы с интеграцией api Youtube 
 
 # Workflow: 
-    Разработка ведется на локальных машинах, после сливаются на сервер и тестируются. 
+    Разработка ведется на локальных машинах, после сливаются на сервер и тестируются.
+    Разработка ведется в ветке с кратким описанием задачи типа 'issue/fixed_css'. 
+    После того как код готов нужно запросить пулл реквест в мастер.
+    Кто запушит сразу в мастер получит пизды. 
     Чтобы развернуть проект необходимы следующие зависиомсти: 
 
    * PHP 7.4 
@@ -18,10 +21,11 @@
    2. sudo apt install php 
    3. sudo apt install php-fpm 
    4. sudo apt-get install php-xml
-   5. apt-get install php-pgsql
+   5. sudo apt-get install php-pgsql
    6. cd etc/nginx/sites-enabled 
    7. vim default 
-   8. скопировать данные из файла nginx.conf , изменив переменную root до папки backend/public , сохранить  
+   8. скопировать данные из файла nginx.conf , изменив переменную root в конфиге до папки backend/public 
+   на вашем компьютере, сохранить  
    9. sudo systemctl start nginx.  
 
 ##  Деплой бекенда: 
@@ -29,7 +33,7 @@
      2. composer install
      3. Прописать в .env фйле реквизиты для доступа к базе
      4. php bin/console doctrine:migrations:migrate 
-     3. symony server:start -port=9000 
+     3. symfony server:start -port=9000 
 
 ##  Деплой фронта: 
     1. cd frontend 
