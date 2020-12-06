@@ -6,12 +6,12 @@ export const MainActions = {
 
     return dispatch => {
       axios.get("http://localhost:9000/api")
-            .then((response) => {
-              console.log("a",response)
-                return dispatch({type: 'login', text: response.data.message });
-            }).catch(err => {
-             console.log(err.message);
-            });;
+        .then((response) => {
+          console.log("a", response)
+          dispatch({ type: 'login', text: response.data.message });
+        }).catch(err => {
+          console.log(err.message);
+        });;
     };
-}
+  }
 };

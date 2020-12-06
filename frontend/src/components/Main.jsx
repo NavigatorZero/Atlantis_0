@@ -2,18 +2,20 @@ import logo from './../logo.svg';
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { MainActions } from '../actions/MainActions'
-
+import Header from './common/Header';
 
 const Main = () => {
-    const state = useSelector(state => state)
-    useDispatch(MainActions.fetchUserInfo());
+    const state = useSelector(state => state);
+    const dispatch = useDispatch();
 
-    const handleClick = () => {
-        console.log(state)
+    const handleClick =  async () => {
+       await dispatch(MainActions.fetchUserInfo());
+       console.log(state)
     }
 
     return (
         <div className="App">
+             <Header/>
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <p>

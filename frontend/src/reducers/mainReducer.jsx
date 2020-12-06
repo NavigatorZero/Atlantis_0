@@ -11,7 +11,7 @@ export function mainReducer( state = initialState, action) {
             return {
                 ...state,
               isLogged: true,
-              text : action.text
+              text: action.text
             };  
         default:
           return state

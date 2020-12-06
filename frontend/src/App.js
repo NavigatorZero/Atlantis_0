@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { Provider } from 'react-redux';
 import 'fontsource-roboto';
 import configureStore from './reducers/configureStore'
