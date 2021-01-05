@@ -5,7 +5,6 @@ import configureStore from './reducers/configureStore'
 import Main from './components/Main'
 function App() {
   const store = configureStore();
-
   return (
          <Provider store={store}>
             <Main/>

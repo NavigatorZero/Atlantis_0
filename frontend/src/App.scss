@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -28,17 +17,88 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.header {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 24px;
+  font-family: Roboto;
+  font-style: normal;
+  border-bottom: 1px solid black;
+
+  &__logo {
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+    &__main{
+      font-family: Tenor Sans;
+      font-size: 48px;
+      font-weight: 400;
+      color: #12005E;
+      font-weight: normal;
+      line-height: 56px;
+    } 
+    &__sub{
+        height: 22px;
+        text-align: center;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+        color: #12005E;
+      }
   }
 
+  &__links {
+    :hover {
+      text-decoration: underline;
+      color: #7C43BD;
+    }
+  }
 }
 
-.header {
- 
-  border-bottom: 1px solid black;
+.Main_workspace {
+
+  &__logo {
+
+}
+&__slogan {
+font-family: Tenor Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 64px;
+line-height: 75px;
+width: 722px;
+height: 224px;
+color: #12005E;
+}
+&__subslogan {
+  font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 42px;
+width: 720px;
+height: 177px;
+}
+
+}
+.introduction {
+font-family: Roboto, sans-serif;
+font-style: normal;
+font-weight: 300!important;
+font-size: 55px;
+line-height: 64px;
+margin-top: 150px;
+margin-bottom: 50px;
+
+}
+.footer {
+  border-top: 3px solid #12005E;
+  &__link {
+    &:hover {
+      color: #7C43BD;
+      text-decoration: none;
+    }
+  }
 }

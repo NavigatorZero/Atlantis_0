@@ -1,0 +1,17 @@
+[
+        {
+            "title": "ХОЧУ БИЗНЕС",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "headerColor":"#7C43BD"
+        },
+        {
+            "title": "ЕСТЬ БИЗНЕС",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "headerColor":"#4A148C"
+        },
+        {
+            "title": "ОБСЛУЖИВАЮ БИЗНЕС",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "headerColor":"#12005E"
+        }
+]
