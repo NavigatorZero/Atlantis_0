@@ -30,4 +30,4 @@ bundle.min.js
 bundle.min.js.map
 webpack
 pm2
-
+package-lock.json
