@@ -49,23 +49,19 @@ const Footer = () => {
 
     return (
         <Box component="footer" mt={25} className="footer">
-            <Grid container xs={12} spacing={8}   justify="center"
-                    alignItems="center">
+            <Grid container xs={12} spacing={8}   justify="center" alignItems="center">
                 <Grid item xs={6} container direction="column" spacing={3}
                     justify="center"
                     alignItems="center">
                     <Grid item className="header__logo__main">
                         КАПИТАЛ
-                </Grid>
-
+                    </Grid>
                     <Grid item>
                         <img src={social_full} className="App-logo" alt="logo" className="Main_workspace__logo" />
                     </Grid>
-
                     <Grid item className="header__logo__sub">
                         8 (666) 666-66-66
                     </Grid>
-
                 </Grid>
 
                 <Grid item xs={3} container direction="column" spacing={3} >
@@ -77,8 +73,7 @@ const Footer = () => {
                                 </Link>
                             </Grid>
                         )
-                    })
-                    }
+                    })}
                 </Grid>
                 <Grid item xs={3} container direction="column" spacing={3} >
                     {menuColumn2.map(item => {
@@ -95,6 +90,5 @@ const Footer = () => {
             </Grid>
         </Box>
     );
-
 }
 export default Footer;

@@ -3,11 +3,17 @@ import { Provider } from 'react-redux';
 import 'fontsource-roboto';
 import configureStore from './reducers/configureStore'
 import Main from './components/Main'
+import { Router } from "react-router";
+import { useLocation } from 'react-router-dom';
+import { createBrowserHistory } from "history";
 function App() {
   const store = configureStore();
+  const history = createBrowserHistory();
   return (
          <Provider store={store}>
+            <Router history={history}>  
             <Main/>
+            </Router>
          </Provider>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { IsEmpty, Map } from "react-lodash"
-import { AppBar, Toolbar, Typography, makeStyles, Button, MenuItem } from "@material-ui/core";
+import { AppBar, Toolbar, Typography, makeStyles, Button, MenuItem, Link } from "@material-ui/core";
 import { Paper } from '@material-ui/core';
 import { Link as RouterLink } from "react-router-dom";
 import Grid from '@material-ui/core/Grid';
@@ -11,24 +11,28 @@ const headersData = [
   {
     label: "Контакты",
     href: "/contacts",
-    menuPos: "left"
+    menuPos: "left",
+    workspace: "test"
   },
   {
     label: "Консультация",
     href: "/consult",
-    menuPos: "left"
+    menuPos: "left",
+    workspace: "test"
   },
   {
     label: "Регистрация",
     href: "/registration",
     style: "leftMenu",
-    menuPos: "right"
+    menuPos: "right",
+    workspace: "test"
   },
   {
     label: "Войти",
     href: "/logout",
     style: "leftMenu",
-    menuPos: "right"
+    menuPos: "right",
+    workspace: "test"
   },
 ];
 
@@ -56,16 +60,19 @@ export default function Header() {
   };
 
   const getLogo = () => {
-    return (
-      <Grid item className="header__logo">
+    return ( 
+      <Grid item >
+          <Link className="header__logo" underline="none" href="/">
         <div className="header__logo__main">
           КАПИТАЛ
       </div>
         <div className="header__logo__sub">
           Бухгалтерская школа
      </div>
+     </Link>
       </Grid>
     );
+ 
   };
 
   const getMenuButtons = (menuItems) => {

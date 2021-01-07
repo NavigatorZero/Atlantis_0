@@ -10,9 +10,9 @@ const CoursesDescription = () => {
     return (
         <Grid container justify="center" >
             <Grid item container justify="center">
-                <Box className="introduction" mt={18.8} mb={6.3}>
+                <Box className="introduction" mt={18.8} mb={6.3} name="introduction" id="about">
                     Мы предоставляем обучение в трёх направлениях
-                    </Box>
+                </Box>
             </Grid>
             <Grid item container xs={12} direction="row"
                 justify="center"
