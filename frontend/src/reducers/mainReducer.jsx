@@ -1,7 +1,7 @@
 const initialState = {
-    count: 0,
-    isLogged: false,
-    text : null
+    mainPage : {
+        location: null
+    }
 };
 
 export function mainReducer( state = initialState, action) {
@@ -12,7 +12,12 @@ export function mainReducer( state = initialState, action) {
                 ...state,
               isLogged: true,
               text: action.text
-            };  
+            };
+            case 'checkMainPage':
+                return {
+                    ...state.mainPage,
+                  location: action.text
+                }; 
         default:
           return state
       }
