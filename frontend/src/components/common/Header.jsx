@@ -5,34 +5,34 @@ import { AppBar, Toolbar, Typography, makeStyles, Button, MenuItem, Link } from 
 import { Paper } from '@material-ui/core';
 import { Link as RouterLink } from "react-router-dom";
 import Grid from '@material-ui/core/Grid';
-
+import { MainActions } from '../../actions/MainActions';
 
 const headersData = [
   {
     label: "Контакты",
     href: "/contacts",
     menuPos: "left",
-    workspace: "test"
+    workspace: "contacts"
   },
   {
     label: "Консультация",
     href: "/consult",
     menuPos: "left",
-    workspace: "test"
+    workspace: "consult"
   },
   {
     label: "Регистрация",
-    href: "/registration",
+    href: "/regestration",
     style: "leftMenu",
     menuPos: "right",
-    workspace: "test"
+    workspace: "regestration"
   },
   {
     label: "Войти",
     href: "/logout",
     style: "leftMenu",
     menuPos: "right",
-    workspace: "test"
+    workspace: "logout"
   },
 ];
 
@@ -40,6 +40,9 @@ const leftMenu = headersData.filter(menuItem => menuItem.menuPos === "left");
 const rightMenu = headersData.filter(menuItem => menuItem.menuPos === "right");
 
 export default function Header() {
+
+  const dispatch = useDispatch();
+  const state = useSelector(state => state.mainPage);
 
   const displayDesktop = () => {
     return (
@@ -76,18 +79,18 @@ export default function Header() {
   };
 
   const getMenuButtons = (menuItems) => {
-    return menuItems.map(({ label, href }) => {
+    return menuItems.map((item ) => {
       return (
-        <Grid item key={label}>
+        <Grid item key={item.label}>
           <Button className="header__links" style={{ textTransform: 'none' }}
             {...{
-              key: label,
+              key: item.label,
               color: "inherit",
-              to: href,
               component: RouterLink,
+              onClick: () =>dispatch(MainActions.checkMainPage(item.workspace))
             }}
           >
-            {label}
+            {item.label}
           </Button>
         </Grid>
       );

@@ -1,0 +1,15 @@
+[
+    {
+        "label": "Ваш контактный телефон",
+        "palceholder": "8 (666) 789-78-67"
+    },
+    {
+        "label": "Ваше имя",
+        "palceholder": "Стив Джобс"
+       
+    },
+    {
+        "label": "Ваш e-mail",
+        "palceholder": "myemail@gmail.com"
+    }
+]

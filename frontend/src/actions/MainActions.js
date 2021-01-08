@@ -1,6 +1,16 @@
 import axios from 'axios';
 
 export const MainActions = {
+
+  checkMainPage: (typePageAction) => {
+    console.log('fetching..')
+
+    return dispatch => {
+      dispatch({ type: 'checkMainPage', text: typePageAction});
+    }
+  },
+
+
   fetchUserInfo: () => {
     console.log('fetching..')
 

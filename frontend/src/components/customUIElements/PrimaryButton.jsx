@@ -21,7 +21,6 @@ const PrimaryButton = ({
             color: placeholder.color,
             height: height,
             width: width,
-            onChange: onChange,
             padding: "0 30px",
             boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
             fontFamily: "Roboto",
@@ -36,7 +35,7 @@ const PrimaryButton = ({
         },
     });
     const classes = useStyles();
-    const button = <Button className={classes.button}>{placeholder.text}</Button>
+    const button = <Button className={classes.button} onClick={onChange}>{placeholder.text}</Button>
     return (
         link ? <Link to={link} spy={true} smooth={true}>{button}</Link> : button 
     );

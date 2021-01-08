@@ -5,22 +5,20 @@ import PrimaryButton from "../customUIElements/PrimaryButton";
 import Grow from '@material-ui/core/Grow';
 import Loader from 'react-loaders'
 import Delay from 'react-delay-render';
-
+import { useDispatch, useSelector } from "react-redux";
+import { MainActions } from '../../actions/MainActions';
 
 const ContactsWorkspace = () => {
-
-    const [checked, setIsLoading] = useState(false);
-
-    useEffect(() => {
-        setIsLoading(true);
-    },[]);
-
+    const dispatch = useDispatch();
+    const state = useSelector(state => state.mainPage);
+  
+    const handleClick = () =>dispatch(MainActions.checkMainPage("consult"))
     return (
-          <Grow
-          in={checked}
-          style={{ transformOrigin: '0 0 0' }}
-          {...(checked ? { timeout: 2000 } : {})}
-        >
+        <Grow
+        in={true}
+        style={{ transformOrigin: '0 0 0' }}
+        {...({ timeout: 1000 })}
+    >
         <Grid xs={6} container direction="column" spacing={3}
             justify="center"
             alignItems="flex-start">
@@ -36,7 +34,7 @@ const ContactsWorkspace = () => {
                 <img src={social_full} className="App-logo" alt="logo" className="Main_workspace__logo" />
             </Grid>
             <Grid item>
-                <PrimaryButton placeholder={{ color: "black", text: "Заказать звонок" }} width="600px" />
+                <PrimaryButton  onChange={handleClick} placeholder={{ color: "black", text: "Заказать звонок" }} width="600px"  />
             </Grid>
         </Grid>
         </Grow>
