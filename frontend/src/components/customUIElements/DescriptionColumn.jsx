@@ -7,9 +7,9 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import CardHeader from '@material-ui/core/CardHeader';
 import { Grid } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 
-const DescriptionColumn = ({ headerColor = "#4A148C", cardTitle = "placeholder", subheader = null, cardBody = "cardBody" }) => {
-
+const DescriptionColumn = ({ headerColor = "#4A148C", cardTitle = "placeholder", subheader = null, cardBody = "cardBody", link = '/' }) => {
     const [isHover, setIsHover] = useState(false);
 
     const useStyles = makeStyles({
@@ -59,7 +59,9 @@ const DescriptionColumn = ({ headerColor = "#4A148C", cardTitle = "placeholder",
             </CardContent>
             <CardActions>
                 <Grid container justify="center">
-                    <Button className={classes.action}>Узнать Больше</Button>
+                    <Link to = {link}>
+                        <Button className={classes.action}>Узнать Больше</Button>
+                    </Link>
                 </Grid>
             </CardActions>
         </Card>

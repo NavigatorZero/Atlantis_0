@@ -1,24 +1,26 @@
 const initialState = {
-    mainPage : {
+    currentCourse: {
+        course: null
+    },
+    mainPpage: {
         location: null
     }
 };
 
-export function mainReducer( state = initialState, action) {
-    console.log(action,'lalala')
+export function mainReducer(state = initialState, action) {
+    console.log(action, 'in reducer')
     switch (action.type) {
-        case 'login':
+        case 'checkMainPage':
             return {
-                ...state,
-              isLogged: true,
-              text: action.text
+                ...state.mainPage,
+                location: action.data
             };
-            case 'checkMainPage':
-                return {
-                    ...state.mainPage,
-                  location: action.text
-                }; 
+        case 'getCourse':
+            return {
+                ...state.currentCourse,
+                course: action.data
+            };
         default:
-          return state
-      }
+            return state
+    }
 }

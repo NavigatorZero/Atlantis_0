@@ -1,17 +1,21 @@
 [
-        {
+        {   "id": 1,
             "title": "ХОЧУ БИЗНЕС",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "headerColor":"#7C43BD"
+            "headerColor":"#7C43BD",
+            "link": "/course_1"
         },
         {
+            "id": 2,
             "title": "ЕСТЬ БИЗНЕС",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "headerColor":"#4A148C"
+            "headerColor":"#4A148C",
+            "link": "/course_2"
         },
-        {
+        {   "id": 3,
             "title": "ОБСЛУЖИВАЮ БИЗНЕС",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "headerColor":"#12005E"
+            "headerColor":"#12005E",
+            "link": "/course_3"
         }
 ]

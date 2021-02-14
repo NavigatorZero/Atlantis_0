@@ -9,10 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { MainActions } from '../../actions/MainActions';
 
 const ContactsWorkspace = () => {
-    const dispatch = useDispatch();
-    const state = useSelector(state => state.mainPage);
-  
-    const handleClick = () =>dispatch(MainActions.checkMainPage("consult"))
+
     return (
         <Grow
         in={true}
@@ -34,7 +31,7 @@ const ContactsWorkspace = () => {
                 <img src={social_full} className="App-logo" alt="logo" className="Main_workspace__logo" />
             </Grid>
             <Grid item>
-                <PrimaryButton  onChange={handleClick} placeholder={{ color: "black", text: "Заказать звонок" }} width="600px"  />
+                <PrimaryButton  placeholder={{ color: "black", text: "Заказать звонок" }} width="600px"  />
             </Grid>
         </Grid>
         </Grow>
