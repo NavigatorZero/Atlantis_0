@@ -20,7 +20,7 @@ const CoursesDescription = () => {
                 {CoursesDescriptionData.map(item => {
                     return (
                         <Grid item >
-                            <DescriptionColumn headerColor={item.headerColor} cardTitle={item.title} cardBody={item.description} />
+                            <DescriptionColumn headerColor={item.headerColor} cardTitle={item.title} cardBody={item.description} link={item.link} />
                         </Grid>
                     );
                 })}

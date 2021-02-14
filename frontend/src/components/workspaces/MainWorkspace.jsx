@@ -6,12 +6,14 @@ import React, { useEffect, useState, useRef } from "react";
 import Grow from '@material-ui/core/Grow';
 import { useDispatch, useSelector } from "react-redux";
 import PhoneCallWorkspace from "./PhoneCallWorkspace";
+import CoursesDescription from '../courses/CoursesDescription';
+
 
 const MainWorkspace = () => {
 
     const state = useSelector(state => state);
     const [isLoading, setIsLoading] = useState(true);
-
+ 
 
     const getWorkspace = (workspaceName) => {
         
@@ -39,22 +41,23 @@ const MainWorkspace = () => {
     </React.Fragment>
 
     return (
-
-        <Grid container>
-            <Grid item xs={6} >
-                <img src={Main_workspace_logo} className="App-logo" alt="logo" className="Main_workspace__logo" />
-            </Grid>
-            <Grow
-                in={true}
-                style={{ transformOrigin: '0 0 0' }}
-                {...({ timeout: 1000 })}
-            >
-                <Grid item container xs={6} direction="column" justify="center" alignItems="flex-start">
-                    {getWorkspace(state.location)}
+        <React.Fragment>
+            <Grid container>
+                <Grid item xs={6} >
+                    <img src={Main_workspace_logo} className="App-logo" alt="logo" className="Main_workspace__logo" />
                 </Grid>
-            </Grow>
-        </Grid>
-
+                <Grow
+                    in={true}
+                    style={{ transformOrigin: '0 0 0' }}
+                    {...({ timeout: 1000 })}
+                >
+                    <Grid item container xs={6} direction="column" justify="center" alignItems="flex-start">
+                        {getWorkspace(state.location)}
+                    </Grid>
+                </Grow>
+            </Grid>
+            <CoursesDescription />
+        </React.Fragment>
     );
 }
 export default MainWorkspace;

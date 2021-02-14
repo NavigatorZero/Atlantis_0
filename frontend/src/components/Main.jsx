@@ -4,19 +4,32 @@ import Header from './common/Header';
 import MainWorkspace from './workspaces/MainWorkspace';
 import CoursesDescription from './courses/CoursesDescription';
 import Footer from './common/Footer';
-import { useLocation } from 'react-router-dom'
+import CouresesMain from './courses/CoursesMain'
+import CoursesDescriptionData from "../public/json/coursesDescriptionData.json";
+
+import {
+    Route,
+    Switch,
+    Redirect,
+    withRouter,
+    useLocation
+  } from "react-router-dom"
 
 const Main = () => {
 
     const state = useSelector(state => state);
-    const location = useLocation();
-    const [path, setPath] = useState(null);
+
+    
     return (<React.Fragment>
         <Header />
-        <MainWorkspace/>
-      
-        <CoursesDescription />
-        <Footer />
+            <Switch>
+            <Route exact  path='/' component={MainWorkspace} />
+            
+             {CoursesDescriptionData.map((e)=>{
+                return <Route path={e.link} component={ ()=>{return <CouresesMain courseId = {e.id}/>} }/>      
+             })}   
+          </Switch>
+            <Footer />
         </React.Fragment>
     )
 

@@ -1,24 +1,26 @@
 import axios from 'axios';
 
+
+const url = "http://localhost:9000/api";
+
+
+
 export const MainActions = {
 
   checkMainPage: (typePageAction) => {
-    console.log('fetching..')
-
     return dispatch => {
-      dispatch({ type: 'checkMainPage', text: typePageAction});
+      dispatch({ type: 'checkMainPage', data: typePageAction });
     }
   },
 
-
-  fetchUserInfo: () => {
+  getCourse: (courseId) => {
     console.log('fetching..')
 
     return dispatch => {
-      axios.get("http://localhost:9000/api")
+      axios.get(url + "/getCourse/" + courseId)
         .then((response) => {
-          console.log("a", response)
-          dispatch({ type: 'login', text: response.data.message });
+
+          dispatch({ type: 'getCourse', data: response.data });
         }).catch(err => {
           console.log(err.message);
         });;
